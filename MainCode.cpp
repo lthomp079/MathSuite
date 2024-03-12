@@ -2,6 +2,16 @@
 #include <unistd.h>
 using namespace std;
 int main() {
+    string yn;
+    float hypo;
+    float base;
+    float height;
+    float area;
+    int st;
+    int nd;
+    int times;
+    int i = 1;
+    int timesdone = 0;
     main:
     int choice = 0;
     cout << "Welcome to MathSuite Version 1.0!" << endl << "What would you like to do?" << endl << "0: Exit\n1: Multiples solver\n2: Triangle Solver\n3: [null]" << endl;
@@ -16,6 +26,7 @@ int main() {
         return 0;
     }
     if (choice == 2) {
+        goto Triangles;
     }
     else {
         return 0;
@@ -24,12 +35,7 @@ int main() {
     This loops back into main in the end, which should be the home
     screen.*/
     multiples:
-    string yn;
-    int st;
-    int nd;
-    int times;
-    int i = 1;
-    int timesdone = 0;    
+    
     cout << "Which two numbers would you like to find multiples of?" << endl << "1st number: ";
     cin >> st;
     cout << "Okay, first number is " << st << ".\nNow enter your second number: ";
@@ -45,20 +51,30 @@ int main() {
             if (yn == "Y" or yn == "y") {
                 goto main;
             }
-            else {
+            else if (yn == "n" or yn == "N" ) {
                 goto multiples;
             }
-            
+            else {
+                return 0;
+            }    
         }
         if (i % st == 0 && i % nd == 0) {
-            
             cout << i << endl;
-            timesdone++;
-            
-            
+            timesdone++;    
         }
     i++;
     }
+    Triangles:
+
+    cout << "Enter the base of your triangle: ";
+    cin >> base;
+    cout << endl << "Now enter the height of your triangle: ";
+    cin >> height;
+    hypo = (base * base) + (height * height);
+    hypo = sqrt(hypo);
+    area = (base * 0.5) * height;
+    cout << "The hypotenuse of the triangle with the dimensions you entered with:\n Base: " << base << "\n Height: " << height << endl;
+    cout << "Has:\n Hypotenuse: " << hypo << "\n Area: " << area;
 }
         
     

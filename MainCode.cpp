@@ -14,7 +14,7 @@ int main() {
     int timesdone = 0;
     main:
     int choice = 0;
-    cout << "Welcome to MathSuite Version 1.0!" << endl << "What would you like to do?" << endl << "0: Exit\n1: Multiples solver\n2: Triangle Solver\n3: [null]" << endl;
+    cout << "Welcome to MathSuite Version 1.01!" << endl << "What would you like to do?" << endl << "0: Exit\n1: Multiples solver\n2: Triangle Solver\n3: [null]" << endl;
     cin >> choice;
     if (choice == 1) {
         goto multiples;
@@ -26,7 +26,7 @@ int main() {
         return 0;
     }
     if (choice == 2) {
-        goto Triangles;
+        goto triangles;
     }
     else {
         return 0;
@@ -64,7 +64,7 @@ int main() {
         }
     i++;
     }
-    Triangles:
+    triangles:
 
     cout << "Enter the base of your triangle: ";
     cin >> base;
@@ -75,7 +75,16 @@ int main() {
     area = (base * 0.5) * height;
     cout << "The hypotenuse of the triangle with the dimensions you entered with:\n Base: " << base << "\n Height: " << height << endl;
     cout << "Has:\n Hypotenuse: " << hypo << "\n Area: " << area;
+    cout << "Would you like to go back home?"<< endl << "Click Y to go back home and N to restart this!" << endl;
+    cin >> yn;
+    if (yn == "Y" or yn == "y") {
+        goto main;
+    }
+    else if (yn == "n" or yn == "N" ) {
+        goto triangles;
+    }
+    else {
+        return 0;
+    }    
+    
 }
-        
-    
-    

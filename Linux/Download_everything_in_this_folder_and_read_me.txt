@@ -1,5 +1,5 @@
 To download MathSuite for Linux, download everything in this folder, and put ALL files into your dedicated Downloads folder.
-If you have followed instructions, cd into the folder:
+If you have followed instructions, GO INTO YOUR TERMINAL, then, cd into the folder:
               cd ~/Downloads
 Then make the MathSuite binary executable by running Setup.sh:
               bash Setup.sh

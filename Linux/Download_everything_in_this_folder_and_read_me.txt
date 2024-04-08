@@ -3,11 +3,11 @@ If you have followed instructions, GO INTO YOUR TERMINAL, then, cd into the fold
               cd ~/Downloads
 Then make the MathSuite binary executable by running Setup.sh:
               bash Setup.sh
-Follow the given instructions, and run MathSuite.sh:
-              bash MathSuite.sh
+Follow the given instructions, and run  .math:
+              bash .math
               You're done!
 
 Now to run MathSuite anytime, just go to the folder it is contained in with cd, and run:
-              bash MathSuite.sh
+              bash .math
 
 -Lucas Thompson, Creator and Developer.

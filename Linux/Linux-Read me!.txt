@@ -9,5 +9,7 @@ Follow the given instructions, and run  .math:
 
 Now to run MathSuite anytime, just go to the folder it is contained in with cd, and run:
               bash .math
+              ( If you followed the instructions, then mathsuite should be in your downloads. To get here from opening your
+                your terminal, type cd Downloads and then run bash .math )
 
 -Lucas Thompson, Creator and Developer.

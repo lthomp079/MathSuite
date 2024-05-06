@@ -3,4 +3,4 @@ Simple project to come up with a big suite, made in C++ of math tools. Doing thi
 
 # How to Download
 GO TO RELEASES
-You will be able to find the latest download for Windows inside of releases! Just download the .exe file, and it should run from there.
+You will be able to find the latest download for Windows inside of releases! Just download the .exe file, and it should run from there. If you want old versions, click tags, then the old version you want.

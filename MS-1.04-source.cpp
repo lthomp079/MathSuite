@@ -114,7 +114,7 @@ void Calculator() {
 int main() { 
     int choice;
     main:
-    cout << "Welcome to MathSuite Version 1.03!" << endl << "What would you like to do?" << endl << "0: Exit\n1: Multiples solver\n2: Triangle Solver\n3: Calculator" << endl;
+    cout << "Welcome to MathSuite Version 1.04!" << endl << "What would you like to do?" << endl << "0: Exit\n1: Multiples solver\n2: Triangle Solver\n3: Calculator" << endl;
     cin >> choice;
     if (choice == 1) {
         Multiples();
@@ -129,7 +129,7 @@ int main() {
         goto main;
     }
     else {
-        cout << "is this triggering?";
+        exit(0);
         return 0;
     }
 }

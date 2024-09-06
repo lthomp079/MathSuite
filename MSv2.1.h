@@ -5,6 +5,9 @@
 #include <cmath>
 #include <stdio.h>
 using namespace std;
+void setColor(int color) {
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
+}
 void factor() {
     char again;
     int b, c, u, v;

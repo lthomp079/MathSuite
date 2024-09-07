@@ -62,11 +62,11 @@ void factor() {
         if (u > 0) 
             u -= (2*u);
         else if (u < 0) 
-            u += (2*u);
+            u += (-2*u);
         if (v > 0) 
             v -= (2*v);
         else if (v < 0) 
-            v += (2*v);
+            v += (-2*v);
         cout << "So, x is " << u << " and " << v << ".\n";
     }
     else {

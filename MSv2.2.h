@@ -1,18 +1,47 @@
-#ifndef _MSv2_1_h
-#define _MSv2_1_h
+#ifndef _MSv2_2_h
+#define _MSv2_2_h
 #include <Windows.h>
 #include <iostream>
 #include <cmath>
 #include <stdio.h>
 using namespace std;
-void setColor(int color) {
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
+/*This section is just for fibonacci checker
+* 
+These are not duplicate functions, this is function overloading*/
+bool perfect_square(int n) {
+    int s = sqrt(n);
+    return (s * s == n);
 }
+// Check if it's part of the fib sequence
+bool fib(int n) {
+    int n1 = 5 * n * n + 4;
+    int n2 = 5 * n * n - 4;
+    return perfect_square(n1) || perfect_square(n2);
+}
+void fib() {
+    string repeat;
+    int number;
+    char response;
+    cout << "Enter your number to check if it is a Fibonacci number: ";
+    cin >> number;
+    //Number input is taken....
+    if (fib(number))
+        cout << "Your number is a fibonacci number!\n";
+    else
+        cout << "Your number is not a fibonacci number...\n";
+    cout << "Want to check another number? Enter Y or N\n";
+    cin >> repeat;
+    if (repeat == "y"|| repeat == "Y")
+        fib();
+    else
+        return;
+}
+//This part is to factor a polynomial where a = 1
 void factor() {
     char again;
     int b, c, u, v;
     bool canfactor;
-    cout << "This polynomial factorer assumes that the value of a, or the number next to x² is always 1.\n";
+    cout << "This polynomial factorer assumes that the value of a, or the number next to x^2 is always 1.\n";
     cout << "Enter the coefficient of x: ";
     cin >> b;
     cout << "Enter the constant: ";
@@ -131,8 +160,8 @@ void Triangles() {
     hypo = (base * base) + (height * height);
     hypo = sqrt(hypo);
     area = (base * 0.5) * height;
-    cout << "The hypotenuse of the triangle with the dimensions you entered with:\n Base: " << base << "\n Height: " << height << endl;
-    cout << "Has:\n Hypotenuse: " << hypo << "\n Area: " << area << endl;
+    cout << "The hypotenuse of the RIGHT triangle with the dimensions you entered with:\n Base: " << base << "\n Height: " << height << endl;
+    cout << "Has:\n (ONLY RIGHT TRIANGLES)Hypotenuse: " << hypo << "\n Area: " << area << endl;
     cout << "Would you like to go back home?"<< endl << "Click H to go back home and R to restart this!" << endl;
     cin >> hr;
     if (hr == 'H' || hr == 'h') 
